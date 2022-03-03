@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+
+{% block title %} 
+  Books 
+{% endblock %} 
+
+{% block page_title %}
+  Programming Books
+{% endblock %}
+
+{% block content %}
+
+<div class="my-10 grid grid-cols-3 gap-5">
+  {% for book in books %}
+  <a
+    href="{% url 'book.show' book.id %}"
+    ,
+    class="text-center m-4 p-2 rounded-lg shadow-lg shadow-blue-500 outline hover:outline-blue-500"
+  >
+    <div class="px-5 py-5 bg-blue-500 rounded-lg">
+      <img src="{{ book.thumbnailUrl }}" width="200" class="mx-auto" />
+    </div>
+    <p class="p-2">{{ book.title }}</p>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

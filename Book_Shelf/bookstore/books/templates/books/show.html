@@ -1,0 +1,83 @@
+{% extends 'base.html' %} 
+
+{% block title %}
+  {{book.title}}
+{% endblock %}
+
+{% block page_title %}
+  {{ book.title }}
+{% endblock %}
+
+{% block content %}
+<div>
+  <div class="px-5 py-5 flex justify-between">
+    <div
+      class="w-1/4 p-5 mt-10 bg-gradient-to-br from-sky-500 to-indigo-700 rounded-lg shadow-lg shadow-blue-500"
+    >
+      <img src="{{ book.thumbnailUrl }}" width="100%" />
+      <p class="mt-5">ISBN {{ book.isbn }}</p>
+      <p class="mt-5">Published on {{ book.publishedOn }}</p>
+    </div>
+    <div class="w-3/4 mt-10 p-5">
+      <div class="p-5 mt-5">
+        <p class="text-3xl">About</p>
+        <p class="mt-5 indent-16">{{ book.shortDescription }}</p>
+      </div>
+      <div class="p-5 mt-5">
+        <p class="text-3xl">Pages</p>
+        <p class="mt-5">Total {{ book.pageCount }} Pages</p>
+      </div>
+      <div class="p-5 mt-5">
+        <p class="text-3xl">Authors</p>
+        {% for author in authors %}
+          <div class="mt-5">
+            <a class="text-blue-700" href="{% url 'author.books' author %}">{{ author }}</a>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="p-5 mt-5">
+        <p class="text-3xl">Description</p>
+        <p class="mt-5 indent-16">{{ book.longDescription }}</p>
+      </div>
+      <div class="p-5 mt-5">
+        <p class="text-3xl">Category</p>
+        <p class="mt-5">{{ book.category }}</p>
+      </div>
+      <div class="p-5 mt-5">
+        <p class="text-3xl">Write a Review</p>
+        {% if user.is_authenticated %}
+        <form method="POST" action="{% url 'book.review' book.id %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button
+            type="submit"
+            class="m-2 px-2 bg-transparent text-blue-700 rounded-lg border border-blue-500 float-right"
+          >
+            Submit
+          </button>
+        </form>
+        {% else %}
+          <div class="mt-5 py-2">
+            <a href="{% url 'login' %}?next={{ request.path }}" class="text-blue-700">Login</a> to write a review
+          </div>
+        {% endif %}
+      </div>
+      <div class="p-5 mt-5">
+        <p class="text-3xl">All Reviews</p>
+        <div class="mt-5">
+          {% for review in reviews %}
+          <div class="my-5">
+            <div class="flex text-gray-600 justify-between">
+              <p>{{ review.userId }}</p>
+              <p>{{ review.createdAt }}</p>
+            </div>
+            <p>{{ review.body }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
