@@ -157,5 +157,5 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 # SECURE_HSTS_PRELOAD = True
 # SECURE_SSL_REDIRECT = True
 
-GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = os.environ.get('GD_JSON')
+GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = 'https://drive.google.com/file/d/1W0eYrzucbWVmCE0N8b0UEXW0uyYLa_7i/view?usp=sharing'
 # GOOGLE_DRIVE_STORAGE_MEDIA_ROOT = '<base google drive path for file uploads>'
