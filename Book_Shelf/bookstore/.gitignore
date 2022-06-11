@@ -6,4 +6,3 @@ bookstore/__pycache__/
 *.py[cod]
 db.sqlite3
 books.json
-bookshelf-89221-f8da38a9dc5e.json

@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "bookshelf-89221",
+  "private_key_id": "f8da38a9dc5e8f507b7d1618b3ed4fbc7870ca83",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCsl8D3b/MGcmxO\nggi+MMZVniiVvC3h7o2aueAyvoahCbaprMdE2go2l54/OiJSkiyv5yf6ys43Zu18\nSrZInI0WvkMUqMWAsTiBt2u8cO+zwM6r7mS4pNdP+pmhjAYxwLnwcj2bjbF7ZRaU\nPG3XDSxrU/txlAnmKL2ph7RltG+x48PRz4mRFyYbijWE9s4RUnXrjwQnM9zxuHvf\nx21rDsSIz3NHUY//nS51FTWXWT5Bohgg9s1bQsAHm9A0CdL7H5C8PPz2DYBoC0ME\ndgKAwPd+pbm0QmK4tMxot9lCuyplBL5Ix8C/HckrzH7YCgTCPN5vWHQ5NovibqFK\nlUF8vj7dAgMBAAECggEAKN8cDYyXhNKSduoAx4dV5H8addEVHYCITJiRcPrg92BN\nPzOhEds/mWuAyFDMQXkHt5U6SL//oyuO+ETaE2ptV/IxAQKxmLb/HmrRCtRE03DI\nkHsZI4e3zGMYQCMgcWZGMhxfngdpPQM0nGCOE2P1faoq7Jvl1zkVJwExtXcMD1gw\nHeQevrkv/vZomEbn8wLWhVMMc4PNDjxOeGXRURECPH7bBThlXxR9wQlX/KmCfSXl\nwI7cgaauTXf4NwE5K8TLE/uQlPeQOhIfjQjPTwwbmLdU2D0y4PGBlT0+NA8FFqLQ\nrRXAZFYON6pF94px1C9szu/j/7gMje34GQBKpYhNcQKBgQDtzjq8q5VXPtorMp4s\nb64orRi3dxVKXr8OXAVpJhJ2AU4fvzcJqG++M0Af2O2yAMdC7PZ7mZL6t5LeMB9i\n+1pE1coVR22I9adAjTlToLtNvtShhkAZpcdhBL76y5ZiLcDxPsJAVGR1LVkhRJjC\nJuR2c5ufKeM6g+yd3WYhiGHh7QKBgQC5zDx6q8Rcuc1Un/0awaIqQ3A4fzUO8DtR\neDkZfxi7KGWgagOHcSWuJ5QrBK9qHTX0FjrVry0OVpEPXEshAh4iKKyjB2laKerx\nFvYk9B1SrKvX5rdiIbzgyUrH0iXMWXX3NeZRaJOJc3JNtONBhBhtBl6b73wnvW/U\nyX0Je5vysQKBgFP3ET40x1I62wWNpdPCyxeJpsSAw3+y3HrReweZbcNEyrTi6yf5\n1RqvNeEI00SaicDTsmQJ4Z+s2aqiCzMD1OehJO1GfyJwulFMjAU/J2NYEfPGVzO3\nGSLkbhpXcA3SYeHMawITyjSlgmcAtX84BErenwAf5h9vHUjQN5N3eDgxAoGAUf3A\nHr5YPDc+Vn732evjXVU/W58/UeVPuAce45KD3mvYVS8TeZzD7RPIPiemJWTYn2uD\n8TKJ5o7rGuU2vk1J8PcUICmwIzrmVBg27V3Q5uAOQYuuF58d0/DgkEe7qG8+MKbX\nictleD27DnGp7AqYINyzuYq4tmzRwgxcomerDTECgYEAnnOrJAGej/wZQCF7dpWo\n7Rpv3kAHAqIx4WzzQSV9B1D9sDCPyqntxkcJyf4GJlhry3x8So6NQ/YKuEnKctPy\nAW6bG3OF4Tgpo4gro0sG6zLXyI4e251CUyDLkoN3RVhNljcD3lez0yo7BJrh5sDu\niYaR536glT4HPOzlAZdkcmE=\n-----END PRIVATE KEY-----\n",
+  "client_email": "bookshelfservices@bookshelf-89221.iam.gserviceaccount.com",
+  "client_id": "107603396239724144606",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bookshelfservices%40bookshelf-89221.iam.gserviceaccount.com"
+}
