@@ -1,20 +1,10 @@
 {% extends 'base.html' %} 
 
-{% block title %} 
-  Books 
-{% endblock %} 
+{% block title %} {{ Search Results }} {% endblock %}
 
-{% block page_title %}
-  Programming Books
-{% endblock %}
+{% block page_title %} Search Results {% endblock %}
 
 {% block content %}
-
-<div class="flex justify-center pt-10">
-  <form action="{% url 'search_results' %}" method="get">
-    <input name="q" type="text" placeholder="Search by Book Name ..." class="border rounded p-2">
-  </form>
-</div>
 
 <div class="my-10 grid grid-cols-3 gap-5">
   {% for book in books %}

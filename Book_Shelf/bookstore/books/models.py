@@ -1,7 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
+from gdstorage.storage import GoogleDriveStorage
+import os
 
 # Create your models here.
+
+gd_storage = GoogleDriveStorage()
 
 class Author(models.Model):
     name = models.CharField(max_length=256)
@@ -19,6 +23,8 @@ class Book(models.Model):
     publishedOn = models.DateTimeField(null=True)
     isbn = models.CharField(max_length=256, null=True)
     authors = models.ManyToManyField(Author)
+    book = models.FileField(upload_to='books', storage=gd_storage, null=True)
+    bookURL = models.URLField(null=True)
     # image = models.ImageField(upload_to='images', null=True)
 
     def __str__(self) -> str:

@@ -10,7 +10,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
-from distutils.debug import DEBUG
 from pathlib import Path
 import os
 import dj_database_url
@@ -26,7 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'w=%^^--q6lx1%51@x*j_#urc$$b%gmag5b82q59x629{q.bE"/FhjgkKJ660%VW#Q|N#qHxNb')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DJANGO_DEBUG', '') == 'True'
+# DEBUG = os.environ.get('DJANGO_DEBUG', '') == 'True'
+DEBUG = True
 
 ALLOWED_HOSTS = ['book--shelf--project.herokuapp.com', 'localhost']
 
@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'books',
-    'registration'
+    'registration',
+    'gdstorage'
 ]
 
 MIDDLEWARE = [
@@ -155,3 +156,6 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 # SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 # SECURE_HSTS_PRELOAD = True
 # SECURE_SSL_REDIRECT = True
+
+GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = '/home/user/Django Projects/BookShelf/Book_Shelf/bookstore/bookshelf-89221-f8da38a9dc5e.json'
+# GOOGLE_DRIVE_STORAGE_MEDIA_ROOT = '<base google drive path for file uploads>'

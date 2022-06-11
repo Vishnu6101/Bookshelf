@@ -1,9 +1,10 @@
+from turtle import title
 from typing import Any, Dict
 from django.shortcuts import redirect, render, get_object_or_404
 # from django.http import HttpResponse, Http404
 from books.models import Book, Review
 from django.views import generic
-from django.db.models import QuerySet
+from django.db.models import QuerySet, Q
 
 from books.form import ReviewForm
 
@@ -43,3 +44,13 @@ def review(request, id):
         if form.is_valid():
             form.save()
     return redirect(f"/book/{id}")
+
+class SearchResultsView(generic.ListView):
+    model = Book
+    template_name = 'books/search.html'
+    context_object_name = 'books'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        object_list = Book.objects.filter(Q(title__icontains=query))
+        return object_list
