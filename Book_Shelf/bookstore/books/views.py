@@ -1,7 +1,5 @@
-from turtle import title
 from typing import Any, Dict
-from django.shortcuts import redirect, render, get_object_or_404
-# from django.http import HttpResponse, Http404
+from django.shortcuts import redirect, render
 from books.models import Book, Review
 from django.views import generic
 from django.db.models import QuerySet, Q
