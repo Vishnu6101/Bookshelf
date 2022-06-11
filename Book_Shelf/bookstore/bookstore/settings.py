@@ -157,5 +157,5 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 # SECURE_HSTS_PRELOAD = True
 # SECURE_SSL_REDIRECT = True
 
-GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = '/home/user/Django Projects/BookShelf/Book_Shelf/bookstore/bookshelf-89221-f8da38a9dc5e.json'
+GOOGLE_DRIVE_STORAGE_JSON_KEY_FILE = os.environ.get('GD_JSON')
 # GOOGLE_DRIVE_STORAGE_MEDIA_ROOT = '<base google drive path for file uploads>'
