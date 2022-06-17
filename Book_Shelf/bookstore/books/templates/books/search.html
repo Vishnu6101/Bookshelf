@@ -6,6 +6,7 @@
 
 {% block content %}
 
+{% if books|length %}
 <div class="my-10 grid grid-cols-3 gap-5">
   {% for book in books %}
   <a
@@ -20,4 +21,7 @@
   </a>
   {% endfor %}
 </div>
+  {% else %}
+    <p class="p-2 text-center">No Results</p>
+  {% endif %}
 {% endblock %}
